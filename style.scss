@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    top: 0;
+}
+html {scroll-behavior: smooth;}
+$navbgcolor: rgb(3,0,19);
+$textcolor:white;
+body {
+    background: linear-gradient(to bottom,rgb(209, 209, 209),rgb(200,200,200));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+    // JS add classes 
+
+
+
+    //
+
+ // css 
+.nav {
+    height: 95vh;
+    background: $navbgcolor;
+    width: 5rem;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;   
+    color: white;
+    transition: 400ms ease-in-out;
+    
+}
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.items {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    font-size: 20px;
+    align-items: flex-start;
+    width: 100%;
+    margin-left: 15px;
+    
+}
+.items a {
+    color: white;
+    background-color: rgb(17, 17, 17);
+    padding:  10px 15px;
+    user-select: none;
+    border-radius: 10px;
+    transition: 400ms ease-in-out;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    width: 60%;
+    flex-direction: row;
+}
+.fa-bars,.fa-times {
+    width: 100%;
+    transition: 10ms ease-in-out;
+
+}
+.anim {
+    transform: translateX(90%) rotateX(180deg);
+}
+.items p {
+    margin-left: 20px;
+    transition: 400ms ease-in-out;
+    opacity: 0;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.iconEx {
+    margin: 20px 0;
+
+}
+.fa-bars {
+    transition: 400ms ease-in-out;
+}
+.items a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    
+}
+.itemsCont {
+    @include flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 50%;
+    width: 100%;
+}
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    display: none;
+    width: 150px;
+    margin-left: 20px;
+    padding-bottom: 2px;
+    transition: 1s ease-in-out;
+
+}
+
+.search {
+    padding: 14px !important;
+
+}
+.search:hover {
+    background-color:rgb(17, 17, 17)  !important;
+    color:white !important;
+}
+
+::placeholder {
+    color: white;
+    font-size: 16px;
+}
+.navExtend {
+    width: 15rem;
+}
+.allItemz {
+    align-items: flex-start;
+}
